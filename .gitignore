@@ -1,0 +1,57 @@
+# Build
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Visual Studio Code
+.history/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Generated files
+Generated/
+Debug/
+Release/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
