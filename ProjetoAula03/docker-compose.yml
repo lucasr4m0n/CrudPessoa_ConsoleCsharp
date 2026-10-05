@@ -1,0 +1,32 @@
+# Define os servicos que serao executados
+services:
+   sqlserver:
+    # Define a imagem SQL Server que sera utilizada
+    image: mcr.microsoft.com/mssql/server:latest
+
+    # Define o nome do container
+    container_name: sqlserver_aula03
+
+    # Define a politica de reinicio do container
+    restart: always
+
+    #Define as portas a serem expostas
+    ports:
+       - "1434:1433" # Mapeia a poreta 1434 da maquina host para a porta padrao 1433 do SQL Server 
+
+    # Define as variaveis de ambiente necessarias para o SQL Server
+    environment:
+      SA_PASSWORD: "Coti@2025" # Define a senha do usuario SA
+      ACCEPT_EULA: "Y" # Aceita os termos de uso do SQL Server
+      MYSQL_PID: "Developer" # Define a edicao do SQL Server como Developer
+
+    # Define um volume para persistencia dos dados no banco
+    volumes:
+      - sqlserver_data:/var/opt/mssql #Mapeia um volume nomeado para persistir os dados
+    
+    # Define os volumes utilizados pelos servicos
+volumes:
+    sqlserver_data:
+        driver: local # Define que o volume sera armazenado localmente    
+        
+    

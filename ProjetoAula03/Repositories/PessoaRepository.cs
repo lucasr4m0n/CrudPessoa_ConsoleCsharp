@@ -12,7 +12,7 @@ namespace ProjetoAula03.Repositories
     public class PessoaRepository
     {
         //declarar um atributo para armazenar a connectionstring
-        private string _connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ProjetoAula03;Integrated Security=True;";
+        private string _connectionString = "Data Source=localhost,1434;Initial Catalog=master;User ID=sa;Password=Coti@2025;Encrypt=False";
 
         //metódo para inserir um registro de pessoa no banco de dados
         public void Inserir(Pessoa pessoa)
